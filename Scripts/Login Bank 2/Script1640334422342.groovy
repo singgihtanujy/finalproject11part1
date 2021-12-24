@@ -17,4 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-CucumberKW.runFeatureFile('Include/features/KAT-9 Singgih Final Test WEB.feature')
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://banksystem-2.herokuapp.com/')
+
+WebUI.click(findTestObject('Object Repository/Login Bank 2/a_Login'))
+
+WebUI.setText(findTestObject('Object Repository/Login Bank 2/input_Email_Input.Email'), 'singgih.tanu@finansia.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Login Bank 2/input_Password_Input.Password'), 'vB31XdcLjIY6huYb935v5g==')
+
+WebUI.click(findTestObject('Object Repository/Login Bank 2/button_Log in'))
+
+WebUI.click(findTestObject('Object Repository/Login Bank 2/button_Close'))
+
+WebUI.closeBrowser()
+

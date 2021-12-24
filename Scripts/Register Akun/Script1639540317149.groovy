@@ -17,3 +17,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://banksystem-demoshop.herokuapp.com/')
+
+WebUI.click(findTestObject('Object Repository/Register/a_Register'))
+
+WebUI.setText(findTestObject('Object Repository/Register/input_Email_Input.Email'), 'singgih.tanu@finansia.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Register/input_Password_Input.Password'), 'aeHFOx8jV/A=')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Register/input_Confirm password_Input.ConfirmPassword'), 'aeHFOx8jV/A=')
+
+WebUI.click(findTestObject('Object Repository/Register/button_Register'))
+
+texterror = WebUI.waitForElementPresent(findTestObject('Register/Text Error'), 5)
+
+if (texterror.equals(true)) {
+    WebUI.setText(findTestObject('Object Repository/Register/input_Email_Input.Email'), email)
+
+    WebUI.setEncryptedText(findTestObject('Object Repository/Register/input_Password_Input.Password'), 'aeHFOx8jV/A=')
+
+    WebUI.setEncryptedText(findTestObject('Object Repository/Register/input_Confirm password_Input.ConfirmPassword'), 'aeHFOx8jV/A=')
+
+    WebUI.click(findTestObject('Object Repository/Register/button_Register'))
+}
+

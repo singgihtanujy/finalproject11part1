@@ -2,7 +2,7 @@
 <TestCaseEntity>
    <description>Summary: Singgih Final Test WEB
 Description: ini untuk test web</description>
-   <name>KAT-9 Singgih Final Test WEB</name>
+   <name>Register Akun</name>
    <tag>jira-integration</tag>
    <integratedEntity>
       <productName>JIRA</productName>
@@ -16,4 +16,11 @@ Description: ini untuk test web</description>
    </integratedEntity>
    <comment></comment>
    <testCaseGuid>a1fbe765-dbec-4803-bd67-a157f2c2fc79</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6c512cc6-0631-483d-82a2-be44253503f8</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
 </TestCaseEntity>
